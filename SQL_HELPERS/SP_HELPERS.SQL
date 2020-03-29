@@ -1,0 +1,21 @@
+EXECUTE sp_server_info
+
+///////////////////////////////////////////////////
+
+EXECUTE sp_depends CUSTOMER
+
+///////////////////////////////////////////////////
+
+EXECUTE sp_executesql 'SCRIPT IN STRING'
+
+///////////////////////////////////////////////////
+
+EXECUTE sp_datatype_info -11
+
+///////////////////////////////////////////////////
+
+DECLARE @ret varchar(500);
+exec master..xp_sprintf @ret OUTPUT, 'CoDe ...
+readers will%s receive a free%sHarley Davidson ...
+hog.', ' not', ''
+PRINT @ret
